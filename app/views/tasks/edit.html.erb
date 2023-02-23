@@ -1,0 +1,9 @@
+<%= form_with model: @task, class: 'form-control' do |form| %>
+  <%= form.label :title, class: "form-label" %>
+  <%= form.text_field :title, class: 'form-control mb-3' %>
+  <%= form.label :details, class: "form-label" %>
+  <%= form.text_field :details, class: 'form-control mb-3' %>
+  <%= form.label :completed, class: "form-check-label" %>
+  <%= form.check_box :completed, class: "mb-3 form-check" %>
+  <%= form.submit class: "btn btn-primary" %>
+<% end %>

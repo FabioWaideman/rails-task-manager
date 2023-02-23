@@ -1,0 +1,24 @@
+<h1><%= @task.title %></h1>
+
+<div>
+  <p><%= @task.details %></p>
+  <p>
+    <% if @task.completed? %>
+      <%= 'This task is completed' %>
+    <% else %>
+      <%= 'This task is not completed yet' %>
+    <% end %>
+  </p>
+</div>
+
+<br>
+
+<%= link_to 'Edit task', edit_path %>
+
+<br>
+
+<%= link_to "Delete", task_path(@task.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure to remove #{@task.title}?"} %>
+
+<br>
+
+<%= link_to 'Back', tasks_path %>
